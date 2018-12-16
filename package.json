@@ -1,0 +1,39 @@
+{
+  "name": "hobnob",
+  "version": "0.1.0",
+  "description": "Back end for a simple user directory API with recommendation engine",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist && babel src -d dist",
+    "serve": "yarn run build && node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon -w src --exec yarn run serve",
+    "lint": "eslint src",
+    "fix": "eslint src --fix",
+    "precommit": "yarn run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jagracia19/hobnob.git"
+  },
+  "author": "Jose Angel Gracia <jagracia19@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jagracia19/hobnob/issues"
+  },
+  "homepage": "https://github.com/jagracia19/hobnob#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.0",
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "husky": "^1.2.1",
+    "nodemon": "^1.18.9",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0"
+  }
+}
